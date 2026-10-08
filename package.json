@@ -1,0 +1,31 @@
+{
+  "name": "log-arithmic",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "bun --watch apps/server/src/index.ts",
+    "start": "bun apps/server/src/index.ts",
+    "test": "bun test",
+    "typecheck": "tsc --noEmit",
+    "dashboard:dev": "bun run --cwd apps/dashboard dev",
+    "dashboard:build": "bun run --cwd apps/dashboard build",
+    "cli": "bun apps/cli/src/index.ts",
+    "benchmark:ingest": "bun scripts/benchmark.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "^5.7.2",
+    "vite": "^5.4.11"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}
